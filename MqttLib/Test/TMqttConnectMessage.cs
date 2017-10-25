@@ -5,7 +5,9 @@ namespace MqttLib.Core.Messages.Test
 {
     public class TMqttConnectMessage
     {
-
+        /// <summary>
+        /// <author>林思培，3114001569</author>>
+        /// </summary>
         [Fact]
         public void InitMqttConnetMessageTemp()
         {
@@ -17,6 +19,9 @@ namespace MqttLib.Core.Messages.Test
             Assert.Equal(255, mqttConnectMessage.KeepAlive);
             Assert.False(mqttConnectMessage.CleanSession);
         }
+        /// <summary>
+        /// <author>林思培，3114001569</author>>
+        /// </summary>
         [Theory]
         [InlineData("testMyClent", "feikang", "123456", 0, false)]
         [InlineData("sa", "guanqin", "", 1, false)]
