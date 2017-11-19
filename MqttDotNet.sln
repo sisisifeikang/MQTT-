@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttLib", "MqttLib\MqttLib.csproj", "{8714BC76-4234-4406-AECF-4D28DFF98A1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttClient", "MqttApp\MqttClient.csproj", "{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,18 @@ Global
 		{8714BC76-4234-4406-AECF-4D28DFF98A1F}.Release|ARM.ActiveCfg = Release|Any CPU
 		{8714BC76-4234-4406-AECF-4D28DFF98A1F}.Release|x86.ActiveCfg = Release|x86
 		{8714BC76-4234-4406-AECF-4D28DFF98A1F}.Release|x86.Build.0 = Release|x86
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Debug|x86.Build.0 = Debug|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Release|ARM.Build.0 = Release|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Release|x86.ActiveCfg = Release|Any CPU
+		{06FE2636-D8C0-4DC6-8795-7CC8D39A31CB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
