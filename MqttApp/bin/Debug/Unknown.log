@@ -1,0 +1,65 @@
+#
+# Creating new log
+#
+2017/11/20 - 1:13:11 - [ERROR]System.IO.IOException: 无法从传输连接中读取数据: 远程主机强迫关闭了一个现有的连接。。 ---> System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 MqttLib.Core.Messages.MqttMessage.ReadCompleteBuffer(Stream str, Byte[] buffer)
+   在 MqttLib.Core.Messages.MqttConnackMessage.ConstructFromStream(Stream str)
+   在 MqttLib.Core.Messages.MqttMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MqttConnackMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MessageFactory.CreateMessage(Stream str, Byte header)
+   在 MqttLib.Core.StreamManager.listen(IAsyncResult asyncResult)
+#
+# Creating new log
+#
+2017/11/20 - 1:21:12 - [ERROR]System.IO.IOException: 无法从传输连接中读取数据: 您的主机中的软件中止了一个已建立的连接。。 ---> System.Net.Sockets.SocketException: 您的主机中的软件中止了一个已建立的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.IO.Stream.ReadByte()
+   在 MqttLib.Core.Messages.MqttMessage.DecodeVariableHeaderLength(Stream str)
+   在 MqttLib.Core.Messages.MqttMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MqttPingRespMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MessageFactory.CreateMessage(Stream str, Byte header)
+   在 MqttLib.Core.StreamManager.listen(IAsyncResult asyncResult)
+#
+# Creating new log
+#
+2017/11/20 - 1:24:54 - [ERROR]System.IO.IOException: 无法从传输连接中读取数据: 您的主机中的软件中止了一个已建立的连接。。 ---> System.Net.Sockets.SocketException: 您的主机中的软件中止了一个已建立的连接。
+   在 System.Net.Sockets.Socket.BeginReceive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.NetworkStream.BeginRead(Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.BeginRead(Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   在 MqttLib.Core.StreamManager.listen(IAsyncResult asyncResult)
+#
+# Creating new log
+#
+2017/11/20 - 1:25:50 - [ERROR]System.IO.IOException: 无法从传输连接中读取数据: 您的主机中的软件中止了一个已建立的连接。。 ---> System.Net.Sockets.SocketException: 您的主机中的软件中止了一个已建立的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 System.IO.Stream.ReadByte()
+   在 MqttLib.Core.Messages.MqttMessage.DecodeVariableHeaderLength(Stream str)
+   在 MqttLib.Core.Messages.MqttMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MqttPingRespMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MessageFactory.CreateMessage(Stream str, Byte header)
+   在 MqttLib.Core.StreamManager.listen(IAsyncResult asyncResult)
+#
+# Creating new log
+#
+2017/11/20 - 1:26:57 - [ERROR]System.IO.IOException: 无法从传输连接中读取数据: 远程主机强迫关闭了一个现有的连接。。 ---> System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 MqttLib.Core.Messages.MqttMessage.ReadCompleteBuffer(Stream str, Byte[] buffer)
+   在 MqttLib.Core.Messages.MqttConnackMessage.ConstructFromStream(Stream str)
+   在 MqttLib.Core.Messages.MqttMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MqttConnackMessage..ctor(Stream str, Byte header)
+   在 MqttLib.Core.Messages.MessageFactory.CreateMessage(Stream str, Byte header)
+   在 MqttLib.Core.StreamManager.listen(IAsyncResult asyncResult)
