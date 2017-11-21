@@ -1,0 +1,112 @@
+﻿<Window x:Class="WpfForm.ConnectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfForm"
+        mc:Ignorable="d"
+        Title="登陆" Height="424" Width="644" WindowStartupLocation="CenterScreen"
+        >
+    
+        <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg" Opacity="0.7"></ImageBrush>
+        </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+        <Button Foreground="White" FontSize="40" Margin="5" 
+            BorderBrush="White" Background="#60AA4030"
+            Padding="0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" MinWidth="400" IsEnabled="True">Mqtt客户端</Button>
+
+        
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="buttonConnect" Margin="5" MinWidth="100" MaxWidth="160" Click="buttonConnect_Click">连接</Button>
+            <Button Name="buttonClose" Margin="5" MinWidth="100" MaxWidth="160" Click="buttonClose_Click">退出</Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                <Label>主机名</Label>
+                <TextBox Name="textBoxHostname"></TextBox>
+                
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+                <Label>客户端ID</Label>
+                <TextBox Name="textBoxClientID"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0" Margin="5">
+                <Label>会话</Label>
+                <CheckBox Name="checkBoxCleanSession">清理会话</CheckBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5">
+                <Label>连接</Label>
+                <CheckBox Name="checkBoxAutoConnect">自动连接</CheckBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="2" Margin="5">
+                <Label>心跳包间隔(秒)</Label>
+                <TextBox Name="textBoxAlive"></TextBox>
+            </StackPanel>
+            <Button Grid.Row="1" Grid.Column="3" Height="30" Width="110" HorizontalAlignment="Left" Margin="5" Click="Button_Click">随机生成</Button>
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Expander Margin="5" Padding="5" Header="高级选项"
+            BorderThickness="1" BorderBrush="Black"  MinWidth="200"   HorizontalAlignment="Left" Grid.Column="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" MaxWidth="300"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="auto" MaxWidth="350"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <StackPanel>
+                            <Label >用户名</Label>
+                            <TextBox Name="textBoxUsername" Margin="5" MinWidth="200" MaxWidth="400" HorizontalAlignment="Left"></TextBox>
+                            <Label >密码</Label>
+                            <PasswordBox Name="textBoxPassword" Margin="5" MinWidth="200" MaxWidth="400"  HorizontalAlignment="Left"></PasswordBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Label >遗嘱主题</Label>
+                        <TextBox Name="textBoxWillTopic" Margin="5" MinWidth="300" MaxWidth="500" HorizontalAlignment="Left"></TextBox>
+                        <Label >遗嘱消息</Label>
+                        <TextBox Name="textBoxWillMessage" Margin="5" MinWidth="300" MaxWidth="500" HorizontalAlignment="Left"></TextBox>
+                        <Label >遗嘱消息</Label>
+                        <ComboBox Name="comboBoxWillQos" Margin="5" MinWidth="300" MaxWidth="500" HorizontalAlignment="Left"></ComboBox>
+                        <Label >遗嘱保留</Label>
+                        <CheckBox Name="checkBoxWillRetain" Margin="5" MinWidth="300" MaxWidth="500" HorizontalAlignment="Left">保留</CheckBox>
+                    </StackPanel>
+                    <GridSplitter Grid.Column="1" Width="5" VerticalAlignment="Stretch" HorizontalAlignment="Center"></GridSplitter>
+
+                </Grid>
+            </Expander>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfForm.PublishWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfForm"
+        mc:Ignorable="d"
+        Title="自动推送" Height="322.697" Width="496.382">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg" Opacity="0.65"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="5" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" >
+            <Label>推送</Label>
+            <StackPanel Margin="5">
+                <Label>任务名</Label>
+                <TextBox Name="textBoxTaskName"></TextBox>
+                <Label>推送主题</Label>
+                <TextBox Name="textBoxPubTopic"></TextBox>
+                <Label>服务质量</Label>
+                <ComboBox Name="comboBoxPubQos"></ComboBox>
+                <Label>是否保留</Label>
+                <CheckBox Name="checkBoxRetained">保留</CheckBox>
+                <Label>时间间隔(秒)</Label>
+                <TextBox Name="textBoxSec"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label>推送消息</Label>
+            <DataGrid Name="dataGridViewMessage">
+            </DataGrid>
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="5">
+                <Label>属性</Label>
+                <TextBox Name="textBoxProperty"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                <Label>值类型</Label>
+                <ComboBox Name="comboBoxValueType"></ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                <Label>值或范围</Label>
+                <TextBox Name="textBoxValue"></TextBox>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Right">
+            <Button Margin="5" Width="50" Click="Button_Click_2">添加</Button>
+        </StackPanel>
+        
+        
+        
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Margin="5,0,5,0" Click="Button_Click" Name="buttonHandle">123</Button>
+            <Button Margin="5,0,5,0" Click="Button_Click_1">退出</Button>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
