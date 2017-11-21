@@ -16,7 +16,7 @@ namespace MqttClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormConnect());
+            Application.Run(new FormMain());
         }
     }
 }

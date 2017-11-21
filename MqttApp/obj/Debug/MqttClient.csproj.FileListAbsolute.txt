@@ -2,10 +2,12 @@ C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\bin\Debug\MqttClient.exe
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\bin\Debug\MqttClient.exe
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\bin\Debug\MqttClient.pdb
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\bin\Debug\MqttLib.dll
-C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.FormConnect.resources
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.Properties.Resources.resources
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.exe
 C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.pdb
+C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.FormMain.resources
+C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.FormAutoPublishTaskSetting.resources
+C:\Users\Administrator\Desktop\存\MQTT--master\MqttApp\obj\Debug\MqttClient.csprojResolveAssemblyReference.cache

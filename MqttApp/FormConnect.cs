@@ -14,12 +14,26 @@ namespace MqttClient
         private void FormConnect_Load(object sender, EventArgs e)
         {
             SetDefaultValue();
+            SetCombobox();
+        }
+
+        private void SetCombobox()
+        {
+            comboBoxWillQos.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            foreach (string name in StaticResources.GetNameEnumerable())
+            {
+                comboBoxWillQos.Items.Add(name);
+            }
+
+            comboBoxWillQos.SelectedIndex = 0;
+            this.Focus();
         }
 
         private void SetDefaultValue()
         {
-            radioButtonSession.Checked = true;
-            radioButtonConnection.Checked = true;
+            checkBoxCleanSession.Checked = true;
+            checkBoxAutoConnect.Checked = true;
             textBoxAlive.Text = "120";
             textBoxHostname.Text = "tcp://localhost:1883";
         }
@@ -35,16 +49,28 @@ namespace MqttClient
                 MessageBox.Show("心跳包间隔时间范围为0-255秒");
                 return;
             }
+            bool withWill = (textBoxWillTopic.Text != null && textBoxWillMessage.Text != null);
 
-            if(withUser)
-                result=MqttClient.Instance().Connect(textBoxHostname.Text,textBoxClientID.Text,
-                    radioButtonSession.Checked,keepAliveSecond,
-                    textBoxUsername.Text,textBoxPassword.Text);
+            MqttClient mqttClient = MqttClient.Instance();
+            if(withWill)
+                    mqttClient.SetWill(textBoxWillTopic.Text, textBoxWillMessage.Text,
+                        comboBoxWillQos.SelectedText, checkBoxWillRetain.Checked);
+            mqttClient.cleanSession = checkBoxCleanSession.Checked;
+            mqttClient.AutoConnected = checkBoxAutoConnect.Checked;
+            if (withUser)                
+                result = MqttClient.Instance().Connect(textBoxHostname.Text, textBoxClientID.Text,
+                    keepAliveSecond,
+                    textBoxUsername.Text, textBoxPassword.Text);     
             else
-                result=MqttClient.Instance().Connect(textBoxHostname.Text, textBoxClientID.Text,
-                    radioButtonSession.Checked, keepAliveSecond);
+                result = MqttClient.Instance().Connect(textBoxHostname.Text, textBoxClientID.Text,
+                    keepAliveSecond);            
             if (result == false)
                 MessageBox.Show("无法连接");
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
 
         }
 
@@ -52,6 +78,12 @@ namespace MqttClient
         {
             Guid guid = Guid.NewGuid();
             textBoxClientID.Text= guid.ToString("N");
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
